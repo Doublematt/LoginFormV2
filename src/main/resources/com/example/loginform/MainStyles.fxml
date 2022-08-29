@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="207.0" prefHeight="91.0" prefWidth="462.0" styleClass="panel" stylesheets="@mainStyles.css">
+         <children>
+            <Label layoutX="137.0" layoutY="12.0" prefHeight="53.0" prefWidth="255.0" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="Eras Bold ITC" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-2.0" prefHeight="460.0" prefWidth="221.0" styleClass="panel" stylesheets="@mainStyles.css">
+         <children>
+            <Label layoutX="22.0" layoutY="174.0" styleClass="logo" stylesheets="@mainStyles.css" text="DM" textFill="#bfbfbf">
+               <font>
+                  <Font name="Eras Bold ITC" size="96.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="usernameField" layoutX="360.0" layoutY="227.0" prefHeight="33.0" prefWidth="181.0" promptText="username" styleClass="loginField" stylesheets="@mainStyles.css" />
+      <PasswordField fx:id="passwordField" layoutX="360.0" layoutY="277.0" prefHeight="33.0" prefWidth="181.0" promptText="password" styleClass="loginField" stylesheets="@mainStyles.css" />
+      <FontAwesomeIconView fill="#2b1394" glyphName="USERS" layoutX="412.0" layoutY="183.0" size="60" />
+      <Button fx:id="loginButton" layoutX="408.0" layoutY="342.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" styleClass="loginButton" stylesheets="@mainStyles.css" text="submit" textFill="#e0e0e1" />
+   </children>
+</AnchorPane>

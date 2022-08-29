@@ -1,0 +1,30 @@
+.panel {
+    -fx-background-color: linear-gradient( to top left, #2b1394, #f200d1);
+}
+
+.loginButton {
+    -fx-background-color: #2b1394;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 15px;
+
+}
+
+.loginButton:hover {
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient( to top left, #2b1394, #f200d1);
+
+}
+
+.loginField {
+    -fx-background-color:transparent;
+    -fx-border-radius: 15px;
+    -fx-border-color: #2b1394;
+
+}
+
+
+
+.logo:hover {
+    -fx-text-fill: linear-gradient(to bottom right, #250d0d, #000000);
+    -fx-cursor:hand;
+}
