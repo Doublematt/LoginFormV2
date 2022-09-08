@@ -7,10 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,8 +21,6 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
-    @FXML
-    private Button loginButton;
 
     @FXML
     private PasswordField passwordField;
@@ -30,8 +28,17 @@ public class MainController implements Initializable {
     @FXML
     private TextField usernameField;
 
+    @FXML
+    private AnchorPane mainPanel;
+
+    @FXML
+    private Label logo;
+
     private HashMap<String, String> usersData = new HashMap<String, String>();
     private Alert alert;
+    private Stage stage;
+    private DropShadow dropShadow;
+
 
 
     public boolean checkPassword (){
@@ -81,12 +88,40 @@ public class MainController implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    /*
+    creates an Alert confirmation instance
+    waits for user answer and if its OK then closes the program
+*/
+    public void exit(ActionEvent event) {
+
+        //alert instance
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit");
+        alert.setHeaderText("");
+        alert.setContentText("Are you sure? ");
+
+        //checking if user wants to exit
+            if (alert.showAndWait().get() == ButtonType.OK) {
+            stage = (Stage) mainPanel.getScene().getWindow();
+            System.out.println("Successfully exited");
+            stage.close();
+            }
+        }
+
+        @Override
+        public void initialize(URL url, ResourceBundle resourceBundle) {
 
         usersData.put("admin", "admin");
         usersData.put("myLogin", "myPassword");
         usersData.put("user", "1234");
+
+        dropShadow = new DropShadow();
+        dropShadow.setColor(Color.valueOf("#89bfc4"));
+        dropShadow.setRadius(0.8);
+        dropShadow.setOffsetX(5);
+        dropShadow.setOffsetY(5);
+
+        logo.setEffect(dropShadow);
 
     }
 }

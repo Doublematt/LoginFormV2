@@ -22,9 +22,16 @@
 
 }
 
-
-
 .logo:hover {
     -fx-text-fill: linear-gradient(to bottom right, #250d0d, #000000);
     -fx-cursor:hand;
+}
+
+.exit {
+    -fx-background-color: linear-gradient(to top left, #0808bc, #4c4cbc);
+    -fx-cursor:hand;
+}
+
+.exit:hover {
+    -fx-background-color: #358ed7;;
 }
