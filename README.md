@@ -1,5 +1,5 @@
 
-#LoginForm version 2
+# LoginForm version 2
 Login form using javafx framework and simple css.
 
 ## Table of contents
