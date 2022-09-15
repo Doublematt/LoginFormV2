@@ -13,7 +13,7 @@
             <Font name="Bell MT" size="96.0" />
          </font>
       </Label>
-      <Button fx:id="exitButton" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="48.0" styleClass="exit" stylesheets="@mainStyles.css">
+      <Button fx:id="exitButton" layoutX="538.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" prefHeight="24.0" prefWidth="48.0" styleClass="exit" stylesheets="@mainStyles.css">
          <graphic>
             <FontAwesomeIconView glyphName="CLOSE" />
          </graphic>
